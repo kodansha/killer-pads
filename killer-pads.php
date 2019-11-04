@@ -3,7 +3,7 @@
  * Plugin Name: Killer Pads
  * Plugin URI: https://github.com/kodansha/killer-pads
  * Description: This plugin activate the defaults for sophisticated WordPress sites.
- * Version: 0.0.1
+ * Version: 1.0.0
  * Author: Kodansha Ltd.
  * Author URI: https://github.com/kodansha
  * License: GPL v2 or later (http://www.gnu.org/licenses/gpl-2.0.html)
