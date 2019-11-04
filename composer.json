@@ -1,0 +1,24 @@
+{
+  "name": "kodansha/killer-pads",
+  "description": "This plugin activate the defaults for sophisticated WordPress sites.",
+  "keywords": [
+    "wordpress",
+    "plugin"
+  ],
+  "homepage": "https://github.com/kodansha/killer-pads",
+  "authors": [
+    {
+      "name": "Kodansha Ltd.",
+      "homepage": "https://github.com/kodansha"
+    }
+  ],
+  "type": "wordpress-plugin",
+  "require": {
+    "php": ">=7.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "KillerPads\\": "includes"
+    }
+  }
+}
