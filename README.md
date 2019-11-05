@@ -10,7 +10,7 @@ to WordPress websites.
 - Add favicon to admin pages (`favicon.ico` or `favicon.png` must be placed in your theme's root directory)
 - Disable autosave functions
 
-### Remove REST routes
+## Remove REST routes
 
 - Remove all routes except ones used by famous plugins and explicitly whitelisted
 
