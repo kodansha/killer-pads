@@ -23,7 +23,10 @@ class AdminPad
         add_action('load-index.php', [$this, 'redirectDashboard']);
         add_action('login_redirect', [$this, 'redirectAfterLogin']);
         add_action('admin_menu', [$this, 'removeCommentsMenu']);
-
+        add_action('wp_before_admin_bar_render', [
+            $this,
+            'removeCommentsBarMenu'
+        ]);
         add_action('wp_print_scripts', [$this, 'disableAutosave']);
     }
 
@@ -60,6 +63,12 @@ class AdminPad
     public function removeCommentsMenu()
     {
         remove_menu_page('edit-comments.php');
+    }
+
+    public function removeCommentsBarMenu()
+    {
+        global $wp_admin_bar;
+        $wp_admin_bar->remove_menu('comments');
     }
 
     public function disableAutosave()
