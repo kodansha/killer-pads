@@ -8,9 +8,9 @@ to WordPress websites.
 
 ### Admin page customization
 
-- Remove admin dashboard
+- Disable admin dashboard page
 - Add favicon to admin pages (`favicon.ico` or `favicon.png` must be placed in your theme's root directory)
-- Disable autosave functions
+- Disable post autosave
 
 ### Remove REST routes
 
@@ -20,13 +20,34 @@ to WordPress websites.
 
 - Disable XML-RPC
 
+## Installation
+
+This plugin is intended to be installed via [Composer](https://getcomposer.org).
+
+Configure your `composer.json` like the following:
+
+```json
+{
+  ...
+  "require": {
+    ...
+    "kodansha/killer-pads": "^1.0.0",
+    ...
+  },
+  ...
+}
+```
+
+As an alternative way, of course you can just download the source codes and put
+them into the plugin directory of your WordPress installation.
+
 ## Configuration
 
 ### Remove Dashboard function configuration
 
-When activating this plugin, admin home page is redirected to `/edit.php?post_type=post`.
+When activating this plugin, admin home page is being redirected to `/edit.php?post_type=post`.
 If you want to change the path to be redirected, add the following to `wp-config.php`:
 
 ```php
-define('KILLER_PADS_ADMIN_HOME_PAGE_PATH', "edit.php?post_type=page")
+define('KILLER_PADS_ADMIN_HOME_PAGE_PATH', "edit.php?post_type=page");
 ```
