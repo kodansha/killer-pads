@@ -15,7 +15,9 @@ if (!defined('ABSPATH') || !defined('WPINC')) {
 }
 
 // Autoloader
-require_once plugin_dir_path(__FILE__) . 'vendor/autoload.php';
+if (is_readable(__DIR__ . '/vendor/autoload.php')) {
+    require_once __DIR__ . '/vendor/autoload.php';
+}
 
 (new KillerPads\AdminPad())->init();
 (new KillerPads\RestRoutesPad())->init();
