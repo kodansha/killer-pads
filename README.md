@@ -43,6 +43,19 @@ them into the plugin directory of your WordPress installation.
 
 ## Configuration
 
+### REST routes
+
+By default, only the following namespaces are allowed in whitelist:
+
+- `api`
+- `preview`
+
+If you want to provide your own whitelist (e.g. `wp/v2`), add the following to `wp-config.php`:
+
+```php
+define('KILLER_PADS_NAMESPACE_WHITELIST', ['wp/v2', 'preview']);
+```
+
 ### Remove Dashboard function configuration
 
 When activating this plugin, admin home page is being redirected to `/edit.php?post_type=post`.

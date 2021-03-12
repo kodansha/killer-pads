@@ -40,8 +40,9 @@ class RestRoutesPad
             return $result;
         }
 
-        // TODO: make this configurable
-        $namespace_whitelist = self::DEFAULT_NAMESPACE_WHITELIST;
+        $namespace_whitelist = defined('KILLER_PADS_NAMESPACE_WHITELIST')
+            ? KILLER_PADS_NAMESPACE_WHITELIST
+            : self::DEFAULT_NAMESPACE_WHITELIST;
 
         foreach ($namespace_whitelist as $namespace) {
             if (strpos($route, $namespace) === 1) {
