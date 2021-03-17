@@ -11,6 +11,7 @@ to WordPress websites.
 - Disable admin dashboard page
 - Add favicon to admin pages (`favicon.ico` or `favicon.png` must be placed in your theme's root directory)
 - Disable post autosave
+- Remove comments menu by default
 
 ### Remove REST routes
 
@@ -63,4 +64,13 @@ If you want to change the path to be redirected, add the following to `wp-config
 
 ```php
 define('KILLER_PADS_ADMIN_HOME_PAGE_PATH', "edit.php?post_type=page");
+```
+
+### Enable comments menu in admin pages
+
+Comments menus are disabled by default. If you want to use comments and need to
+show comments menu in admin pages, add the following to `wp-config.php`:
+
+```php
+define('KILLER_PADS_ENABLE_COMMENTS_MENU', true);
 ```

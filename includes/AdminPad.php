@@ -22,11 +22,15 @@ class AdminPad
         add_action('admin_menu', [$this, 'removeDashboardMenu']);
         add_action('load-index.php', [$this, 'redirectDashboard']);
         add_action('login_redirect', [$this, 'redirectAfterLogin']);
-        add_action('admin_menu', [$this, 'removeCommentsMenu']);
-        add_action('wp_before_admin_bar_render', [
-            $this,
-            'removeCommentsBarMenu'
-        ]);
+
+        if (!(defined('KILLER_PADS_ENABLE_COMMENTS_MENU') && KILLER_PADS_ENABLE_COMMENTS_MENU == true)) {
+            add_action('admin_menu', [$this, 'removeCommentsMenu']);
+            add_action('wp_before_admin_bar_render', [
+                $this,
+                'removeCommentsBarMenu'
+            ]);
+        }
+
         add_action('wp_print_scripts', [$this, 'disableAutosave']);
     }
 
