@@ -57,6 +57,9 @@ If you want to provide your own whitelist (e.g. `wp/v2`), add the following to `
 define('KILLER_PADS_NAMESPACE_WHITELIST', ['wp/v2', 'preview']);
 ```
 
+> **Warning**
+> Rest routes that start with `/wp/v2/users` are always blocked even when the `wp/v2` namespace is whitelisted.
+
 ### Remove Dashboard function configuration
 
 When activating this plugin, admin home page is being redirected to `/edit.php?post_type=post`.
