@@ -11,7 +11,7 @@ to WordPress websites.
 - Disable admin dashboard page
 - Add favicon to admin pages (`favicon.ico` or `favicon.png` must be placed in your theme's root directory)
 - Disable post autosave
-- Remove comments menu by default
+- Disable comments features by default
 
 ### Remove REST routes
 

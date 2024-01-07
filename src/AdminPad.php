@@ -22,16 +22,6 @@ class AdminPad
         add_action('admin_menu', [$this, 'removeDashboardMenu']);
         add_action('load-index.php', [$this, 'redirectDashboard']);
         add_action('login_redirect', [$this, 'redirectAfterLogin']);
-
-        if (!(defined('KILLER_PADS_ENABLE_COMMENTS') && KILLER_PADS_ENABLE_COMMENTS == true)) {
-            add_action('admin_init', [$this, 'removeCommentsFeatures']);
-            add_action('admin_menu', [$this, 'removeCommentsMenu']);
-            add_action('wp_before_admin_bar_render', [
-                $this,
-                'removeCommentsBarMenu'
-            ]);
-        }
-
         add_action('wp_print_scripts', [$this, 'disableAutosave']);
     }
 
@@ -63,35 +53,6 @@ class AdminPad
     public function redirectAfterLogin()
     {
         return admin_url($this->redirect_path);
-    }
-
-    public function removeCommentsFeatures()
-    {
-        global $pagenow;
-
-        if ($pagenow === 'edit-comments.php') {
-            wp_safe_redirect(admin_url($this->redirect_path));
-        }
-
-        remove_meta_box('dashboard_recent_comments', 'dashboard', 'normal');
-
-        foreach (get_post_types() as $post_type) {
-            if (post_type_supports($post_type, 'comments')) {
-                remove_post_type_support($post_type, 'comments');
-                remove_post_type_support($post_type, 'trackbacks');
-            }
-        }
-    }
-
-    public function removeCommentsMenu()
-    {
-        remove_menu_page('edit-comments.php');
-    }
-
-    public function removeCommentsBarMenu()
-    {
-        global $wp_admin_bar;
-        $wp_admin_bar->remove_menu('comments');
     }
 
     public function disableAutosave()

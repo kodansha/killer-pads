@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Plugin Name: Killer Pads
  * Plugin URI: https://github.com/kodansha/killer-pads
@@ -22,3 +23,7 @@ if (is_readable(__DIR__ . '/vendor/autoload.php')) {
 (new KillerPads\AdminPad())->init();
 (new KillerPads\RestRoutesPad())->init();
 (new KillerPads\SecurityPad())->init();
+
+if (!(defined('KILLER_PADS_ENABLE_COMMENTS') && KILLER_PADS_ENABLE_COMMENTS == true)) {
+    (new KillerPads\CommentsPad())->init();
+}
