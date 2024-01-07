@@ -9,7 +9,7 @@ to WordPress websites.
 ### Admin page customization
 
 - Disable admin dashboard page
-- Add favicon to admin pages (`favicon.ico` or `favicon.png` must be placed in your theme's root directory)
+- Add favicon to admin pages (`favicon.ico`, `favicon.png` or `favicon.svg` must be placed in your theme's root directory)
 - Disable post autosave
 - Disable comments features by default
 

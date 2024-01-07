@@ -27,7 +27,7 @@ class AdminPad
 
     public function addFavicon()
     {
-        $favicon_files = ["favicon.ico", "favicon.png"];
+        $favicon_files = ["favicon.ico", "favicon.png", "favicon.svg"];
 
         foreach ($favicon_files as $favicon_file) {
             $abspath = get_stylesheet_directory() . '/' . $favicon_file;
