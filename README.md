@@ -23,24 +23,21 @@ to WordPress websites.
 
 ## Installation
 
-This plugin is intended to be installed via [Composer](https://getcomposer.org).
+This plugin is intended to be installed exclusively via [Composer](https://getcomposer.org).
 
 Configure your `composer.json` like the following:
 
-```json
+```jsonc
 {
-  ...
+  // ... snip ...
   "require": {
-    ...
+    // ... snip ...
     "kodansha/killer-pads": "^1.0.0",
-    ...
+    // ... snip ...
   },
-  ...
+  // ... snip ...
 }
 ```
-
-As an alternative way, of course you can just download the source codes and put
-them into the plugin directory of your WordPress installation.
 
 ## Configuration
 
@@ -69,11 +66,12 @@ If you want to change the path to be redirected, add the following to `wp-config
 define('KILLER_PADS_ADMIN_HOME_PAGE_PATH', "edit.php?post_type=page");
 ```
 
-### Enable comments menu in admin pages
+### Enable comments
 
-Comments menus are disabled by default. If you want to use comments and need to
-show comments menu in admin pages, add the following to `wp-config.php`:
+Comments features are completely disabled by default. If you want to use
+comments and need to show comments menu in admin pages, add the following to
+`wp-config.php`:
 
 ```php
-define('KILLER_PADS_ENABLE_COMMENTS_MENU', true);
+define('KILLER_PADS_ENABLE_COMMENTS', true);
 ```
