@@ -1,6 +1,6 @@
 <?php
 
-namespace KillerPads;
+namespace Kodansha\KillerPads;
 
 use WP_Error;
 

@@ -5,20 +5,25 @@
     "wordpress",
     "plugin"
   ],
-  "homepage": "https://github.com/kodansha/killer-pads",
+  "type": "wordpress-plugin",
   "authors": [
     {
-      "name": "Kodansha Ltd.",
+      "name": "KODANSHA Ltd.",
       "homepage": "https://github.com/kodansha"
+    },
+    {
+      "name": "Hirofumi Wakasugi",
+      "homepage": "https://github.com/5t111111"
     }
   ],
-  "type": "wordpress-plugin",
+  "homepage": "https://github.com/kodansha/killer-pads",
+  "license": "GPL v2 or later",
   "require": {
     "php": ">=7.3"
   },
   "autoload": {
     "psr-4": {
-      "KillerPads\\": "src"
+      "Kodansha\\KillerPads\\": "src/"
     }
   }
 }

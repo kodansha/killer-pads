@@ -20,10 +20,18 @@ if (is_readable(__DIR__ . '/vendor/autoload.php')) {
     require_once __DIR__ . '/vendor/autoload.php';
 }
 
-(new KillerPads\AdminPad())->init();
-(new KillerPads\RestRoutesPad())->init();
-(new KillerPads\SecurityPad())->init();
+/**
+ * Initialize plugin
+ */
+function init()
+{
+    (new Kodansha\KillerPads\AdminPad())->init();
+    (new Kodansha\KillerPads\RestRoutesPad())->init();
+    (new Kodansha\KillerPads\SecurityPad())->init();
 
-if (!(defined('KILLER_PADS_ENABLE_COMMENTS') && KILLER_PADS_ENABLE_COMMENTS == true)) {
-    (new KillerPads\CommentsPad())->init();
+    if (!(defined('KILLER_PADS_ENABLE_COMMENTS') && KILLER_PADS_ENABLE_COMMENTS == true)) {
+        (new Kodansha\KillerPads\CommentsPad())->init();
+    }
 }
+
+add_action('plugins_loaded', 'init', PHP_INT_MAX - 1);
