@@ -17,7 +17,7 @@
     }
   ],
   "homepage": "https://github.com/kodansha/killer-pads",
-  "license": "GPL v2 or later",
+  "license": "GPL-2.0-or-later",
   "require": {
     "php": ">=7.3"
   },
