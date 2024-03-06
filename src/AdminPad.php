@@ -47,7 +47,7 @@ class AdminPad
 
     public function redirectDashboard()
     {
-        wp_safe_redirect(admin_url($this->redirect_path));
+        wp_redirect(admin_url($this->redirect_path));
     }
 
     public function redirectAfterLogin()
