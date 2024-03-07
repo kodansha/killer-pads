@@ -28,6 +28,7 @@ function init()
     (new Kodansha\KillerPads\AdminPad())->init();
     (new Kodansha\KillerPads\RestRoutesPad())->init();
     (new Kodansha\KillerPads\SecurityPad())->init();
+    (new Kodansha\KillerPads\RestEndpointsPad())->init();
 
     if (!(defined('KILLER_PADS_ENABLE_COMMENTS') && KILLER_PADS_ENABLE_COMMENTS == true)) {
         (new Kodansha\KillerPads\CommentsPad())->init();

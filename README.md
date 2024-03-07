@@ -12,6 +12,7 @@ to WordPress websites.
 - Add favicon to admin pages (`favicon.ico`, `favicon.png` or `favicon.svg` must be placed in your theme's root directory)
 - Disable post autosave
 - Disable comments features by default
+- Fix REST API endpoints when operating separate admin and front-end domains
 
 ### Remove REST routes
 
