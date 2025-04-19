@@ -9,7 +9,7 @@ class AdminPad
     public function __construct()
     {
         if (defined('KILLER_PADS_ADMIN_HOME_PAGE_PATH')) {
-            $this->redirect_path = KILLER_PADS_ADMIN_HOME_PAGE_PATH;
+            $this->redirect_path = constant('KILLER_PADS_ADMIN_HOME_PAGE_PATH');
         } else {
             $this->redirect_path = "edit.php?post_type=post";
         }
@@ -30,9 +30,9 @@ class AdminPad
         $favicon_files = ["favicon.ico", "favicon.png", "favicon.svg"];
 
         foreach ($favicon_files as $favicon_file) {
-            $abspath = get_stylesheet_directory() . '/' . $favicon_file;
+            $favicon_path = get_stylesheet_directory() . '/' . $favicon_file;
 
-            if (file_exists($abspath)) {
+            if (file_exists($favicon_path)) {
                 $url = get_stylesheet_directory_uri() . '/' . $favicon_file;
                 echo '<link rel="shortcut icon" href="' . $url . '" />';
                 break;
