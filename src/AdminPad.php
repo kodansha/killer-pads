@@ -22,7 +22,6 @@ class AdminPad
         add_action('admin_menu', [$this, 'removeDashboardMenu']);
         add_action('load-index.php', [$this, 'redirectDashboard']);
         add_action('login_redirect', [$this, 'redirectAfterLogin']);
-        add_action('wp_print_scripts', [$this, 'disableAutosave']);
     }
 
     public function addFavicon()
@@ -53,10 +52,5 @@ class AdminPad
     public function redirectAfterLogin()
     {
         return admin_url($this->redirect_path);
-    }
-
-    public function disableAutosave()
-    {
-        wp_deregister_script('autosave');
     }
 }

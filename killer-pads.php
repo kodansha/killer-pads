@@ -29,8 +29,9 @@ function killer_pads_init()
     (new Kodansha\KillerPads\AdminPad())->init();
     (new Kodansha\KillerPads\RestRoutesPad())->init();
     (new Kodansha\KillerPads\SecurityPad())->init();
+    (new Kodansha\KillerPads\AutosavePad())->init();
 
-    if (!(defined('KILLER_PADS_ENABLE_COMMENTS') && KILLER_PADS_ENABLE_COMMENTS == true)) {
+    if (!(defined('KILLER_PADS_ENABLE_COMMENTS') && constant('KILLER_PADS_ENABLE_COMMENTS') === true)) {
         (new Kodansha\KillerPads\CommentsPad())->init();
     }
 }
