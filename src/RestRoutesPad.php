@@ -14,7 +14,8 @@ class RestRoutesPad
         'contact-form-7', // Contact Form 7
         'cf-api', // Caldera Forms
         'yoast', // Yoast SEO
-        'jetpack' // Jetpack
+        'jetpack', // Jetpack
+        'gf', // Gravity Forms
     ];
 
     // Always blocks Rest API routes including the following paths
@@ -57,7 +58,7 @@ class RestRoutesPad
         }
 
         $namespace_whitelist = defined('KILLER_PADS_NAMESPACE_WHITELIST')
-            ? KILLER_PADS_NAMESPACE_WHITELIST
+            ? constant('KILLER_PADS_NAMESPACE_WHITELIST')
             : self::DEFAULT_NAMESPACE_WHITELIST;
 
         foreach ($namespace_whitelist as $namespace) {
