@@ -30,6 +30,7 @@ function killer_pads_init()
     (new Kodansha\KillerPads\RestRoutesPad())->init();
     (new Kodansha\KillerPads\SecurityPad())->init();
     (new Kodansha\KillerPads\AutosavePad())->init();
+    (new Kodansha\KillerPads\RevisionPad())->init();
 
     if (!(defined('KILLER_PADS_ENABLE_COMMENTS') && constant('KILLER_PADS_ENABLE_COMMENTS') === true)) {
         (new Kodansha\KillerPads\CommentsPad())->init();

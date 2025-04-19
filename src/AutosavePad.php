@@ -7,7 +7,7 @@ class AutosavePad
     /**
      * Initializes the AutosavePad functionality.
      *
-     * This method sets up any necessary hooks or actions required * for the
+     * This method sets up any necessary hooks or actions required for the
      * AutosavePad to operate within the plugin.
      *
      * @return void
