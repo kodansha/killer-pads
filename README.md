@@ -11,6 +11,7 @@ to WordPress websites.
 - Disable admin dashboard page
 - Add favicon to admin pages (`favicon.ico`, `favicon.png` or `favicon.svg` must be placed in your theme's root directory)
 - Disable post autosave
+- Limit the number of post revisions to 100 by default
 - Disable comments features by default
 
 ### Remove REST routes
@@ -32,9 +33,9 @@ Configure your `composer.json` like the following:
   // ... snip ...
   "require": {
     // ... snip ...
-    "kodansha/killer-pads": "^1.0.0",
+    "kodansha/killer-pads": "^1.0.0"
     // ... snip ...
-  },
+  }
   // ... snip ...
 }
 ```
@@ -65,6 +66,11 @@ If you want to change the path to be redirected, add the following to `wp-config
 ```php
 define('KILLER_PADS_ADMIN_HOME_PAGE_PATH', "edit.php?post_type=page");
 ```
+
+### Post revisions
+
+This plugin limits the number of stored post revisions to 100 by default.
+However, if the `WP_POST_REVISIONS` constant is defined, that value takes precedence.
 
 ### Enable comments
 
