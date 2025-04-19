@@ -4,7 +4,7 @@
  * Plugin Name: Killer Pads
  * Plugin URI: https://github.com/kodansha/killer-pads
  * Description: Killer Pads is a plugin like security pads for "prevention is better than cure". It activates the default configuration of security and operational efficiency to WordPress websites.
- * Version: 1.5.7
+ * Version: 1.6.0
  * Author: KODANSHAtech LLC.
  * Author URI: https://github.com/kodansha
  * License: GPLv3 or later
